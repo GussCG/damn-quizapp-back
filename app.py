@@ -24,4 +24,13 @@ app.include_router(ranking_router, prefix="/ranking", tags=["ranking"])
 
 @app.get("/", tags=["root"])
 def root():
-    return {"message": "Welcome to the Quiz API!"}
+    return {
+        "message": """
+    Welcome to the Quiz API!
+    Endpoints:
+    - /auth: Authentication routes
+    - /categories: Category management routes
+    - /quiz: Quiz management routes
+    - /ranking: Ranking management routes
+"""
+    }
